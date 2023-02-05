@@ -8,9 +8,9 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
+    "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\"",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
@@ -21,10 +21,17 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "dotenv": "^16.0.3",
+    "pg": "^8.9.0",
+    "pg-hstore": "^2.3.4",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "sequelize": "^6.28.0",
+    "sequelize-typescript": "^2.1.5",
+    "tsc-watch": "^6.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",
