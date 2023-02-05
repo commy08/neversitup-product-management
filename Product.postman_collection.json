@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "1d4ecb6e-6f08-4232-8fe2-956fe1e02ca9",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25004155"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "423"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a7-wiNzGRWtE1vmU7NIK6VaqxH1lQE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Feb 2023 10:32:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"pro1\",\n        \"description\": \"pro desc 1\",\n        \"price\": 12.5,\n        \"createdAt\": \"2023-02-05T10:21:06.723Z\",\n        \"updatedAt\": \"2023-02-05T10:21:06.723Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"pro2\",\n        \"description\": \"pro desc 2\",\n        \"price\": 99.75,\n        \"createdAt\": \"2023-02-05T10:21:06.723Z\",\n        \"updatedAt\": \"2023-02-05T10:21:06.723Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"pro3\",\n        \"description\": \"pro desc 3\",\n        \"price\": 50,\n        \"createdAt\": \"2023-02-05T10:21:06.723Z\",\n        \"updatedAt\": \"2023-02-05T10:21:06.723Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Product by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "140"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8c-wNwOcrgKt2q+X++e9Kxifu0/f8U\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 Feb 2023 10:33:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"pro1\",\n    \"description\": \"pro desc 1\",\n    \"price\": 12.5,\n    \"createdAt\": \"2023-02-05T10:21:06.723Z\",\n    \"updatedAt\": \"2023-02-05T10:21:06.723Z\"\n}"
+				}
+			]
+		}
+	]
+}
